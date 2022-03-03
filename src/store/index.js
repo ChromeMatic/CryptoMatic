@@ -1,27 +1,13 @@
 import { createStore } from 'vuex';
+import * as theme from './modules/theme.js'
+import * as login from './modules/Login.js'
+import * as SignUp from './modules/SignUp.js'
 
 const store = createStore({
-
-    state: {
-        isDark: false,
-    },
-
-    getters: {
-        getTheme(state) {
-            return state.isDark
-        }
-    },
-
-    actions: {
-        changeTheme({ commit }) {
-            commit('setTheme')
-        }
-    },
-
-    mutations: {
-        setTheme(state) {
-            state.isDark = !state.isDark;
-        },
+    modules: {
+        theme,
+        login,
+        SignUp
     }
 })
 
