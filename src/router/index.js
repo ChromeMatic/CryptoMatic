@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
+import { getCurrentUser } from '../firebase';
 
 const routes = [
 
@@ -13,19 +14,30 @@ const routes = [
     {
         path: '/news',
         name: 'news',
-        component: function() {}
+        component: function() {},
+        meta: {
+            requiresAuth: true
+        }
     },
 
     {
         path: '/track',
         name: 'trackCrypto',
-        component: function() {}
+        component: function() {
+            return import ('../views/dashBoardView.vue')
+        },
+        meta: {
+            requiresAuth: true
+        }
     },
 
     {
         path: '/watchlist',
         name: 'watchlist',
-        component: function() {}
+        component: function() {},
+        meta: {
+            requiresAuth: true
+        }
     },
 
     {
@@ -33,13 +45,19 @@ const routes = [
         name: 'login',
         component: function() {
             return import ('../views/loginView.vue');
+        },
+        meta: {
+            guestOnly: true
         }
     },
 
     {
         path: '/signUp',
         name: 'SignUp',
-        component: function() {}
+        component: function() {},
+        meta: {
+            guestOnly: true
+        }
     }
 
 ]
@@ -47,6 +65,8 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes
-})
+});
+
+
 
 export default router;

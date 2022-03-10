@@ -19,16 +19,21 @@
           name:'DogeCoin',
           path:'dogecoin.png'
         }
+      ],
+      LImgs:[
+        {img:'newspaper.png', news:"Get the latest news about cryptocurrency."},
+        {img:'graph-report.png', news:"Get accurate data of the latest treads of crypto."},
+        {img:'favorite.png', news:"Watch your favorite cryptocurrency."},
+        {img:'bitcoin-wallet.png', news:'Keep upto date with the crypto world.'}
       ]
     }),
     computed:mapGetters(["getTheme"]),
-    methods:{},
  }
 </script>
 
 <template>
   <div :class="getTheme ? 'dark' : ''" class="font-Rajdhani">
-    <div class="dark:bg-gray-800 dark:text-white">
+    <div class="dark:bg-dashC dark:text-white">
 
       <navBar/>  
 
@@ -42,8 +47,8 @@
               Where you can track your favorite cryptocurrencies, for you
             </h2>
             <div class="py-4 px-2">
-              <a href="/login" class="bg-indigo-500 uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
-                              transition-all hover:bg-green-500 hover:shadow-xl">
+              <a href="/login" class="bg-DarkBlue uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
+                              transition-all hover:bg-green-500 dark:hover:bg-yellow hover:text-green-500 hover:shadow-xl">
                   Get Started!
               </a>
             </div>
@@ -67,7 +72,16 @@
 
       </div>
 
-      <div class="py-4 px-1 space-y-4">
+      <div class="py-8 px-1 space-y-4 flex justify-center items-center">
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4">
+          <div v-for="img in LImgs" :key="img.img" class="h-56 w-72 p-4 rounded flex flex-col space-y-4 justify-center items-center bg-gray-100 dark:bg-x">
+             <img :src="'/' + img.img" class="h-32 w-32" alt="">
+             <p class="text-center text-xl font-semibold uppercase">
+               {{img.news}}
+             </p>
+          </div>
+        </div>  
 
       </div>
 
