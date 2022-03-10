@@ -22,13 +22,12 @@
       ]
     }),
     computed:mapGetters(["getTheme"]),
-    methods:{},
  }
 </script>
 
 <template>
   <div :class="getTheme ? 'dark' : ''" class="font-Rajdhani">
-    <div class="dark:bg-gray-800 dark:text-white">
+    <div class="dark:bg-dashC dark:text-white">
 
       <navBar/>  
 

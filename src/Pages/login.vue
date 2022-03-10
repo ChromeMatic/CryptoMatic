@@ -3,15 +3,13 @@
         name:'Login',
         data:()=>({
             user:{
-                username:'',
+                email:'',
                 password:''
             }
         }),
         computed:{},
         methods:{
-            login(){
-
-            }
+           
         }
     }
 </script>
@@ -36,12 +34,12 @@
            
            <div>
                 <label for="email" class="block mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">email</label>
-                <input type="email" class="bg-gray-50 lg:w-96 w-72 px-2 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="cryptomatic@gmail.com" required>
+                <input v-model="user.email" type="email" class="bg-gray-50 lg:w-96 w-72 px-2 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="cryptomatic@gmail.com" required>
            </div>
 
             <div>
-                <label for="password" class="block mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">password</label>
-                <input type="password" placeholder="Please enter password" class="bg-gray-50 lg:w-96 w-72 px-2 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <label  for="password" class="block mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">password</label>
+                <input v-model="user.password" type="password" placeholder="Please enter password" class="bg-gray-50 lg:w-96 w-72 px-2 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
            </div>
 
        </div>
@@ -52,7 +50,7 @@
                <h1 class="text-white">login</h1>
            </button>
 
-           <button  class="py-2 w-72 bg-white rounded-lg uppercase font-semibold text-xl text-gray-600">
+           <button   class="py-2 w-72 bg-white rounded-lg uppercase font-semibold text-xl text-gray-600">
                <h1 class="text-green-500">google</h1>
            </button>
 
