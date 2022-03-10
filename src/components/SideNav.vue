@@ -13,11 +13,11 @@ import { mapGetters, mapActions } from "vuex";
   <div :class="getTheme ? 'dark' : ''">
      <div  class="h-screen w-24 bg-z dark:bg-dashC py-6 px-4 flex flex-col justify-between items-center space-y-4">
 
-    <div class="bg-gray-50 dark:bg-x w-16 rounded-lg flex flex-col justify-center items-center py-2">
+    <div class="bg-gray-200 dark:bg-x w-16 rounded-lg flex flex-col justify-center items-center py-2">
       <img src="/cryptocurrency.png" class="h-14 w-14" alt="">
     </div>
     
-    <div class="w-16 bg-gray-300 dark:bg-x py-4 rounded-lg flex flex-col justify-center items-center space-y-4">
+    <div class="w-16 bg-gray-200 dark:bg-x py-4 rounded-lg flex flex-col justify-center items-center space-y-4">
 
       <a href="#">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-500 transition hover:dark:text-yellow hover:text-green-500" viewBox="0 0 20 20" fill="currentColor">
@@ -61,7 +61,7 @@ import { mapGetters, mapActions } from "vuex";
 
     </div>
 
-    <div class="w-16 bg-gray-300 dark:bg-x py-4 rounded-lg flex flex-col justify-center items-center space-y-4">
+    <div class="w-16 bg-gray-200 dark:bg-x py-4 rounded-lg flex flex-col justify-center items-center space-y-4">
 
       <a href="#">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-500 transition hover:text-green-500 hover:dark:text-yellow" viewBox="0 0 20 20" fill="currentColor">

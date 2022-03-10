@@ -1,7 +1,15 @@
 <script>
     export default {
         name:'FooterSection',
-        data:()=>({})
+        data:()=>({
+            Links:[
+                {img:"https://cdn-icons-png.flaticon.com/512/174/174855.png" , ref:"https://www.instagram.com/armanibrwn/"},
+                {img:"https://cdn-icons.flaticon.com/png/512/3256/premium/3256013.png?token=exp=1646953306~hmac=36339b132f8b632b52c341981ff03e3c", ref:"https://twitter.com/ArmaniB42195047"},
+                {img:"https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1646953345~hmac=16be55448f88e69c5f8ba6634994f407", ref:"https://www.linkedin.com/in/armani-brown-14725616b/"},
+                {img:"https://cdn-icons-png.flaticon.com/512/25/25657.png", ref:"https://github.com/ChromeMatic"},
+                {img:"https://cdn-icons.flaticon.com/png/512/2721/premium/2721725.png?token=exp=1646954713~hmac=f419b3d2f882b943a7c08e51c5f15c0d", ref:"https://armani-tech.netlify.app/"}
+            ]
+        })
     }
 </script>
 
@@ -14,8 +22,10 @@
 
             <h1 class="text-2xl font-semibold">CryptoMatic</h1>
 
-            <div class="flex space-x-2">
-               <div v-for="i in 4" :key="i" class="h-4 w-4 bg-gray-200 rounded animate-pulse"></div>
+            <div class="flex space-x-4">
+               <a v-for="link in Links" :key="link.img" :href="link.ref" target="_blank" class="rounded">
+                   <img :src="link.img" class="h-8 w-8" alt="">
+               </a>
             </div>
 
             <div>

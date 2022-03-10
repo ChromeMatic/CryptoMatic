@@ -4,7 +4,7 @@ export default {
     name:'NavBar',
     data: () => ({
       Navigation:[
-        {name:'crypto news',link:'/news'},
+        {name:'crypto news',link:'/track'},
         {name:'track crypto', link:'/track'},
         {name:'watch-list',link:'/watchlist'},0
       ],
@@ -61,7 +61,7 @@ export default {
           </div>
 
           <!-- Secondary nav -->
-          <div class="md:hidden px-4 py-2 flex justify-between items-center rounded-lg bg-white dark:bg-gray-900">
+          <div class="md:hidden px-4 py-2 flex justify-between items-center rounded-lg bg-white dark:bg-x">
 
             <button @click="show=!show">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800 dark:text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -92,7 +92,7 @@ export default {
 
           <!-- Dropdown nav -->
           <transition name="fade">
-            <div v-if="show" class="mt-1 rounded-lg bg-white dark:bg-gray-900 flex flex-col justify-center items-center px-8 py-2 space-y-2 text-gray-700 dark:text-white uppercase font-semibold">
+            <div v-if="show" class="mt-1 rounded-lg bg-white dark:dark:bg-x flex flex-col justify-center items-center px-8 py-2 space-y-2 text-gray-700 dark:text-white uppercase font-semibold">
                 <a href="/" class="text-xl">HOME</a>
                 <a v-for="nav in Navigation" :key="nav.name" :href="nav.link" class="text-xl">{{nav.name}}</a>
             </div>
