@@ -4,10 +4,10 @@
         data:()=>({
             Links:[
                 {img:"https://cdn-icons-png.flaticon.com/512/174/174855.png" , ref:"https://www.instagram.com/armanibrwn/"},
-                {img:"https://cdn-icons.flaticon.com/png/512/3256/premium/3256013.png?token=exp=1646953306~hmac=36339b132f8b632b52c341981ff03e3c", ref:"https://twitter.com/ArmaniB42195047"},
-                {img:"https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1646953345~hmac=16be55448f88e69c5f8ba6634994f407", ref:"https://www.linkedin.com/in/armani-brown-14725616b/"},
+                {img:"/twitter.png", ref:"https://twitter.com/ArmaniB42195047"},
+                {img:"/linkedin.png", ref:"https://www.linkedin.com/in/armani-brown-14725616b/"},
                 {img:"https://cdn-icons-png.flaticon.com/512/25/25657.png", ref:"https://github.com/ChromeMatic"},
-                {img:"https://cdn-icons.flaticon.com/png/512/2721/premium/2721725.png?token=exp=1646954713~hmac=f419b3d2f882b943a7c08e51c5f15c0d", ref:"https://armani-tech.netlify.app/"}
+                {img:"/web-design.png", ref:"https://armani-tech.netlify.app/"}
             ]
         })
     }
