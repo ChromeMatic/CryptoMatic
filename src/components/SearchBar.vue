@@ -18,7 +18,7 @@ export default {
  <div :class="getTheme ? 'dark' : ''" >
     <div class="bg-gray-50 dark:bg-x flex lg:py-6 lg:px-4">
 
-        <div class="bg-white dark:bg-gray-700 rounded py-2 px-2 flex flex-1 justify-center items-center space-x-4">
+        <div class="rounded py-2 px-2 flex flex-1 justify-center items-center space-x-4">
 
            <div class="flex space-x-1 justify-center items-center">
                 <h1 class="text-gray-600 dark:text-white uppercase text-2xl font-semibold">
