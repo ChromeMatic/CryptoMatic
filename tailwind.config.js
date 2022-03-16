@@ -16,13 +16,12 @@ module.exports = {
             white: colors.white,
             gray: colors.gray,
             green: colors.green,
-            'black': '#18181d',
-            'DarkBlue': '#715FF0',
-            'd-p': '#21212d',
             'yellow': '#cafb01',
             'dashC': '#2a1f37',
             'x': '#322b41',
-            'z': '#edf0f4'
+            'pr1': '#F2F1FD',
+            'btn': '#2553D7',
+            'pr2': '#93fcec',
         }
     },
     plugins: [],

@@ -47,8 +47,8 @@
               Where you can track your favorite cryptocurrencies, for you
             </h2>
             <div class="py-4 px-2">
-              <a href="/login" class="bg-DarkBlue uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
-                              transition-all hover:bg-green-500 dark:hover:bg-yellow hover:text-green-500 hover:shadow-xl">
+              <a href="/track" class="bg-btn uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
+                              transition-all hover:bg-green-500 dark:hover:bg-yellow dark:hover:text-green-500 hover:shadow-xl">
                   Get Started!
               </a>
             </div>

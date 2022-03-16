@@ -14,7 +14,7 @@
 </script>
 
 <template>
-    <div class="w-full lg:px-8 py-2 px-4 bg-gray-100 dark:bg-dashC font-Rajdhani uppercase">
+    <div class="w-full lg:px-8 py-2 px-4 bg-pr1 dark:bg-dashC font-Rajdhani uppercase">
 
         <div class="bg-white dark:bg-x dark:text-white rounded flex flex-col justify-center items-center py-4 space-y-4">
 

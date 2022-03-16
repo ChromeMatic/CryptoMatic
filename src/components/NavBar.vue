@@ -10,7 +10,6 @@ export default {
       ],
       show:false,
     }),
-    created(){},
     computed:mapGetters(["getTheme"]),
     methods:mapActions(["changeTheme"]),
 }
@@ -18,7 +17,7 @@ export default {
 
 <template>
     <div :class="getTheme ? 'dark' : ''">
-      <div class="w-full lg:px-8 py-2 px-4  bg-gray-100 dark:bg-dashC font-Rajdhani uppercase">
+      <div class="w-full lg:px-8 py-2 px-4  bg-pr1 dark:bg-dashC font-Rajdhani uppercase">
 
           <!-- Primary nav -->
           <div class="hidden md:flex justify-between items-center rounded-lg h-16 w-full bg-white dark:bg-x">
@@ -36,10 +35,6 @@ export default {
 
               <div class="flex justify-center items-center space-x-2 text-gray-700 dark:text-white px-8 font-semibold text-xl">
                   
-                  <a href="/signUp" class="transition hover:text-green-500 dark:hover:text-yellow">SignUp</a>
-                
-                  <a href="/login" class="transition hover:text-green-500 dark:hover:text-yellow">Login</a>
-
                   <button @click="changeTheme" class="bg-gray-100 dark:bg-gray-700 p-3 rounded-md flex justify-center items-center
                           transition hover:bg-gray-200">
                       <div v-if="!getTheme">
