@@ -22,6 +22,14 @@ module.exports = {
             'pr1': '#F2F1FD',
             'btn': '#2553D7',
             'pr2': '#93fcec',
+        },
+        screens: {
+            'xs': '375px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
         }
     },
     plugins: [],
