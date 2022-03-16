@@ -4,7 +4,7 @@ export const state = {
 
 export const getters = {
     getTheme(state) {
-        return state.isDark
+        return state.isDark;
     }
 };
 

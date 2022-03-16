@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import { getCurrentUser } from '../firebase';
 
 const routes = [
 
@@ -30,35 +29,6 @@ const routes = [
             requiresAuth: true
         }
     },
-
-    {
-        path: '/watchlist',
-        name: 'watchlist',
-        component: function() {},
-        meta: {
-            requiresAuth: true
-        }
-    },
-
-    {
-        path: '/login',
-        name: 'login',
-        component: function() {
-            return import ('../views/loginView.vue');
-        },
-        meta: {
-            guestOnly: true
-        }
-    },
-
-    {
-        path: '/signUp',
-        name: 'SignUp',
-        component: function() {},
-        meta: {
-            guestOnly: true
-        }
-    }
 
 ]
 

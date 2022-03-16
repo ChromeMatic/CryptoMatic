@@ -3,14 +3,16 @@ import * as theme from './modules/theme.js'
 import * as login from './modules/Login.js'
 import * as SignUp from './modules/SignUp.js'
 import * as User from './modules/user.js'
+import * as Crypto from './modules/crypto.js'
 
 const store = createStore({
     modules: {
         theme,
         login,
         SignUp,
-        User
-    }
+        User,
+        Crypto
+    },
 })
 
 export default store;
