@@ -5,7 +5,7 @@ export default {
     data: () => ({
       Navigation:[
         {name:'crypto news',link:'/track'},
-        {name:'track crypto', link:'/track'},
+        {name:'cryptocurrencies', link:'/track'},
       ],
       show:false,
     }),
