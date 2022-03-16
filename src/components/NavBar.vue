@@ -6,7 +6,6 @@ export default {
       Navigation:[
         {name:'crypto news',link:'/track'},
         {name:'track crypto', link:'/track'},
-        {name:'watch-list',link:'/watchlist'},0
       ],
       show:false,
     }),
@@ -16,8 +15,8 @@ export default {
 </script>
 
 <template>
-    <div :class="getTheme ? 'dark' : ''">
-      <div class="w-full lg:px-8 py-2 px-4  bg-pr1 dark:bg-dashC font-Rajdhani uppercase">
+    <div :class="getTheme ? 'dark' : ''" class="sticky top-0 z-50">
+      <div class="w-full  lg:px-8 py-2 px-4 bg-pr1 dark:bg-dashC font-Rajdhani uppercase">
 
           <!-- Primary nav -->
           <div class="hidden md:flex justify-between items-center rounded-lg h-16 w-full bg-white dark:bg-x">
