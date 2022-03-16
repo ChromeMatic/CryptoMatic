@@ -21,12 +21,12 @@ export default {
 
       <NavBar/>
     
-      <div class="flex flex-col w-full space-y-2 p-2">
+      <div class="flex flex-col w-full space-y-2 px-4 py-4">
         
         <SearchBar/>
 
-        <div class="rounded dark:bg-x bg-gray-50 w-full flex lg:flex-row flex-col justify-center items-center lg:space-x-8 p-2 font-semibold text-gray-700 dark:text-white">
-           <div v-for="crypto in getCrypto" :key="crypto['id']" class="flex flex-col space-y-2 justify-center items-center"> 
+        <div class="rounded w-full grid gap-2 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-3 xs:grid-cols-2 justify-center items-center p-2 font-semibold text-gray-700 dark:text-white">
+           <div v-for="crypto in getCrypto" :key="crypto['id']" class="flex flex-col space-y-2 justify-center items-center dark:bg-gray-800 rounded-md"> 
              {{crypto['name']}}
              <img :src="crypto['image']" class="h-8 w-8" alt="">
              <p>${{crypto['current_price']}}</p>
