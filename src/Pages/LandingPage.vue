@@ -21,9 +21,9 @@
         }
       ],
       LImgs:[
+        {img:'153-bar-chart-growth-flat.gif', news:"Get accurate data of the latest treads of crypto."},
         {img:'newspaper.png', news:"Get the latest news about cryptocurrency."},
-        {img:'graph-report.png', news:"Get accurate data of the latest treads of crypto."},
-        {img:'favorite.png', news:"Watch your favorite cryptocurrency."},
+        {img:'298-coins-flat.gif', news:"Watch your favorite cryptocurrency."},
         {img:'bitcoin-wallet.png', news:'Keep upto date with the crypto world.'}
       ]
     }),
@@ -74,7 +74,7 @@
 
       <div class="py-8 px-1 space-y-4 flex justify-center items-center">
 
-        <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 gap-4">
           <div v-for="img in LImgs" :key="img.img" class="h-56 w-72 p-4 rounded flex flex-col space-y-4 justify-center items-center bg-gray-100 dark:bg-x">
              <img :src="'/' + img.img" class="h-32 w-32" alt="">
              <p class="text-center text-xl font-semibold uppercase">
