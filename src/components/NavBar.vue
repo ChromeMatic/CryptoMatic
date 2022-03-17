@@ -63,7 +63,7 @@ export default {
               </svg>
             </button>
 
-            <img src="/cryptocurrency.png" class="h-8 w-8" alt=""> 
+            <img src="/290-coin-flat.gif" class="h-8 w-8" alt=""> 
 
             <button @click="changeTheme" class="bg-gray-100 dark:bg-gray-700 p-3 rounded-md flex justify-center items-center
                           transition hover:bg-gray-200">

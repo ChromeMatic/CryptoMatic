@@ -6,12 +6,25 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name:'DashBoard',
   components:{SearchBar,NavBar,FooterSection},
-  data:() => ({}),
+  data:() => ({
+    timer:""
+  }),
   created(){
    this.FetchCrypto();
+   this.timer = setInterval(this.FetchCrypto, 120000);
   },
-  computed:mapGetters(["getTheme","getCrypto"]),
-  methods:mapActions(["FetchCrypto"])
+  computed:{
+    ...mapGetters(["getTheme","getCrypto"]),
+  },
+  methods:{
+    ...mapActions(["FetchCrypto"]),
+    ClearTimer(){
+      clearInterval(this.timer);
+    }
+  },
+  beforeDestroy() {
+    this.ClearTimer();
+  },
 }
 </script>
 
