@@ -1,8 +1,9 @@
 import axios from "axios";
 
 export const state = {
+    cryptoID: '',
     crypto: {},
-    cryptoID: {}
+    cryptoData: {}
 };
 
 export const getters = {
@@ -13,7 +14,7 @@ export const getters = {
         return state.cryptoID;
     },
     getCryptoChartInfo(state) {
-
+        return state.cryptoData;
     }
 };
 
@@ -33,13 +34,21 @@ export const actions = {
     },
 
     //Get cryptocurrency information by id
-    async GetCryptoByID({ commit }) {
-
+    GetCryptoByID({ commit }, id) {
+        commit('SetCryptoID', id)
     },
 
-    //Get cryptocurrency chart data by ID
-    async getChartData({ commit }, { id }) {
-        let ID = id + '/market_chart?vs_currency=usd&days=1&interval=10';
+    //Get cryptocurrency data by ID  import.meta.env.VITE_CION_BY_ID
+    async getChartData({ commit }, ID) {
+        let URL =
+            import.meta.env.VITE_CION_BY_ID + ID + '?community_data=false&developer_data=false&sparkline=false';
+        await axios.get(URL).then(
+            res => {
+                commit('SetCryptoData', res.data)
+            }
+        ).catch(error => {
+            alert('Error has happen!');
+        });
     }
 };
 
@@ -49,5 +58,8 @@ export const mutations = {
     },
     SetCryptoID(state, payload) {
         state.cryptoID = payload;
+    },
+    SetCryptoData(state, payload) {
+        state.cryptoData = payload;
     }
 };
