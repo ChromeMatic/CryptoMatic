@@ -30,13 +30,19 @@ const routes = [
         }
     },
 
+    {
+        path: '/charts',
+        name: 'chartInfo',
+        component: function() {
+            return import ('../views/chartView.vue')
+        }
+    }
+
 ]
 
 const router = createRouter({
     history: createWebHistory(),
     routes
 });
-
-
 
 export default router;

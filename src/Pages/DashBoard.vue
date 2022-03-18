@@ -17,9 +17,13 @@ export default {
     ...mapGetters(["getTheme","getCrypto"]),
   },
   methods:{
-    ...mapActions(["FetchCrypto"]),
+    ...mapActions(["FetchCrypto","GetCryptoByID"]),
     ClearTimer(){
       clearInterval(this.timer);
+    },
+    getID(ID){
+      this.GetCryptoByID(ID);
+      this.$router.push('/charts');
     }
   },
   beforeDestroy() {
@@ -43,8 +47,8 @@ export default {
              {{crypto['name']}}
              <img :src="crypto['image']" class="h-8 w-8" alt="">
              <p>${{crypto['current_price']}}</p>
-              <button class="py-2 px-6 bg-white dark:bg-gray-700 rounded font-bold uppercase transition-all hover:text-green-500 dark:hover:text-yellow">
-                View Chart
+              <button @click="getID(crypto['id'])" class="py-2 px-6 bg-white dark:bg-gray-700 rounded font-bold uppercase transition-all hover:text-green-500 dark:hover:text-yellow">
+                Learn More
               </button>
            </div>
         </div>
