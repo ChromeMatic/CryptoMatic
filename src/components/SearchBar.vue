@@ -58,12 +58,12 @@ export default {
 
 
     <div class=" mt-4" >
-       <div v-show="display"  class="lg:py-4 lg:px-8 flex flex-col bg-pr1 dark:bg-gray-900 dark:text-white justify-center items-center space-y-2 text-xl font-semibold text-gray-500 uppercase">      
+       <div v-show="display"  class="lg:py-4  py-8 lg:px-8 flex flex-col bg-pr1 dark:bg-gray-900 dark:text-white justify-center items-center space-y-2 text-xl font-semibold text-gray-500 uppercase">      
                
                <p>Name: {{getCryptoSearchData['name']}}</p>
                <img :src="getCryptoSearchData['large']" class="h-16 w-16" alt="">
                <p>Market Cap rank : {{getCryptoSearchData['market_cap_rank']}}</p>
-               <button class="mt-3 uppercase font-semibold bg-white rounded py-2 px-8 hover:bg-green-400 hover:text-white transition-all dark:bg-gray-700 dark:hover:text-yellow" @click="getID(getCryptoSearchData['id'])">
+               <button class="mt-1 uppercase font-semibold bg-white rounded py-2 px-8 hover:bg-green-400 hover:text-white transition-all dark:bg-gray-700 dark:hover:text-yellow" @click="getID(getCryptoSearchData['id'])">
                    Learn More
                </button>
         </div>
