@@ -11,30 +11,18 @@ const routes = [
     },
 
     {
-        path: '/news',
-        name: 'news',
-        component: function() {},
-        meta: {
-            requiresAuth: true
-        }
-    },
-
-    {
         path: '/track',
         name: 'trackCrypto',
         component: function() {
             return import ('../views/dashBoardView.vue')
-        },
-        meta: {
-            requiresAuth: true
         }
     },
 
     {
-        path: '/charts',
-        name: 'chartInfo',
+        path: '/Info',
+        name: 'CryptoInfo',
         component: function() {
-            return import ('../views/chartView.vue')
+            return import ('../Pages/CryptoInfo.vue')
         }
     }
 

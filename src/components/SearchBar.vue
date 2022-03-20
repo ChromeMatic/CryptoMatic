@@ -1,14 +1,29 @@
 <script>
-import { mapGetters } from "vuex";
+import { checkCompatEnabled } from "@vue/compiler-core";
+import { mapGetters, mapActions } from "vuex";
 export default {
    name:"SearchBar",
    data:() =>({
-       searchWord:""
+       searchWord:"",
+       display:false,
    }),
-   computed:mapGetters(["getTheme"]),
+   computed:{
+     ...mapGetters(["getTheme","getCryptoSearchData"]),
+   },
    methods:{
+       ...mapActions(["getSearchData","GetCryptoByID"]),
        findCoin(){
            let coinName =  this.searchWord;
+           if(coinName){
+               this.getSearchData(coinName)
+               this.display = true;
+           }else{
+               //trigger modal!
+           }
+       },
+       getID(ID){
+            this.GetCryptoByID(ID);
+            this.$router.push('/Info')
        }
    }
 } 
@@ -16,6 +31,7 @@ export default {
 
 <template>
  <div :class="getTheme ? 'dark' : ''" >
+
     <div class="bg-pr1 dark:bg-x flex lg:py-2 lg:px-8 rounded-md">
 
         <div class="py-2 px-2 flex flex-1 justify-center items-center space-x-4">
@@ -39,5 +55,21 @@ export default {
         </div>
 
     </div>
+
+
+    <div class=" mt-4" >
+       <div v-show="display"  class="lg:py-4 lg:px-8 flex flex-col bg-pr1 dark:bg-gray-900 dark:text-white justify-center items-center space-y-2 text-xl font-semibold text-gray-500 uppercase">      
+               
+               <p>Name: {{getCryptoSearchData['name']}}</p>
+               <img :src="getCryptoSearchData['large']" class="h-16 w-16" alt="">
+               <p>Market Cap rank : {{getCryptoSearchData['market_cap_rank']}}</p>
+               <button class="mt-2 uppercase font-semibold bg-white rounded py-2 px-8 hover:bg-green-400 hover:text-white transition-all dark:bg-gray-700 dark:hover:text-yellow" @click="getID(getCryptoSearchData['id'])">
+                   Learn More
+               </button>
+        </div>
+       
+    </div>
+   
+    
  </div>
 </template>
