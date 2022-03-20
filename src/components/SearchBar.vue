@@ -63,7 +63,7 @@ export default {
                <p>Name: {{getCryptoSearchData['name']}}</p>
                <img :src="getCryptoSearchData['large']" class="h-16 w-16" alt="">
                <p>Market Cap rank : {{getCryptoSearchData['market_cap_rank']}}</p>
-               <button class="mt-2 uppercase font-semibold bg-white rounded py-2 px-8 hover:bg-green-400 hover:text-white transition-all dark:bg-gray-700 dark:hover:text-yellow" @click="getID(getCryptoSearchData['id'])">
+               <button class="mt-3 uppercase font-semibold bg-white rounded py-2 px-8 hover:bg-green-400 hover:text-white transition-all dark:bg-gray-700 dark:hover:text-yellow" @click="getID(getCryptoSearchData['id'])">
                    Learn More
                </button>
         </div>
