@@ -1,10 +1,8 @@
 <script>
- import navBar from "../components/NavBar.vue"
- import FooterSection from "../components/FooterSection.vue"
  import { mapGetters } from "vuex";
  export default {
     name:"LandingPage",
-    components:{navBar,FooterSection},
+    components:{},
     data:() => ({
       Imgs:[
         {
@@ -35,8 +33,6 @@
   <div :class="getTheme ? 'dark' : ''" class="font-Rajdhani">
     <div class="dark:bg-dashC dark:text-white">
 
-      <navBar/>  
-
       <div class="flex lg:flex-row flex-col  lg:px-8  px-4 lg:py-8 py-4 lg:space-x-8 lg:space-y-0 space-y-4 justify-center items-center">
 
           <div class="py-4 px-1 space-y-3 flex flex-col justify-center items-center">
@@ -47,10 +43,10 @@
               Where you can track your favorite cryptocurrencies, for you
             </h2>
             <div class="py-4 px-2">
-              <a href="/track" class="bg-btn uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
-                              transition-all hover:bg-green-500 dark:hover:bg-yellow dark:hover:text-green-500 hover:shadow-xl">
+              <router-link to="/track" class="bg-btn uppercase text-white font-semibold text-xl px-16 py-2 rounded-md
+                              transition-all hover:bg-green-600 dark:hover:bg-yellow dark:hover:text-gray-700 hover:shadow-xl">
                   Get Started!
-              </a>
+              </router-link>
             </div>
           </div>
 
@@ -84,8 +80,6 @@
         </div>  
 
       </div>
-
-      <FooterSection/>
 
     </div>
   </div>

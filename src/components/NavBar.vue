@@ -4,8 +4,8 @@ export default {
     name:'NavBar',
     data: () => ({
       Navigation:[
-        {name:'crypto news',link:'/track'},
         {name:'cryptocurrencies', link:'/track'},
+        {name:'crypto news',link:'/Info'},
       ],
       show:false,
     }),
@@ -23,12 +23,12 @@ export default {
 
               <div class="flex justify-center items-center space-x-4 text-gray-700 dark:text-white px-8 font-semibold text-xl">
 
-                  <a href="/" class="flex justify-center items-center space-x-1 transition hover:text-green-500 dark:hover:text-yellow">
+                  <router-link to="/" class="flex justify-center items-center space-x-1 transition hover:text-green-500 dark:hover:text-yellow">
                     <img src="/cryptocurrency.png" class="h-8 w-8" alt="">  
                     <h1>home</h1>
-                  </a>
+                  </router-link>
 
-                  <a v-for="nav in Navigation" :key="nav.name" class="transition hover:text-green-500 dark:hover:text-yellow" :href="nav.link">{{nav.name}}</a>
+                  <router-link v-for="nav in Navigation" :key="nav.name" class="transition hover:text-green-500 dark:hover:text-yellow" :to="nav.link">{{nav.name}}</router-link>
 
               </div>
 
@@ -86,9 +86,9 @@ export default {
 
           <!-- Dropdown nav -->
           <transition name="fade">
-            <div v-if="show" class="mt-1 rounded-lg bg-white dark:dark:bg-x flex flex-col justify-center items-center px-8 py-2 space-y-2 text-gray-700 dark:text-white uppercase font-semibold">
-                <a href="/" class="text-xl">HOME</a>
-                <a v-for="nav in Navigation" :key="nav.name" :href="nav.link" class="text-xl">{{nav.name}}</a>
+            <div v-if="show" class="mt-1 rounded-lg bg-white dark:bg-x flex flex-col justify-center items-center px-8 py-2 space-y-2 text-gray-700 dark:text-white uppercase font-semibold">
+                <router-link to="/" class="text-xl">HOME</router-link>
+                <router-link v-for="nav in Navigation" :key="nav.name" :to="nav.link" class="text-xl">{{nav.name}}</router-link>
             </div>
           </transition>
 

@@ -3,7 +3,8 @@ import axios from "axios";
 export const state = {
     cryptoID: '',
     crypto: {},
-    cryptoData: {}
+    cryptoData: {},
+    cryptoSearchData: {}
 };
 
 export const getters = {
@@ -15,6 +16,9 @@ export const getters = {
     },
     getCryptoChartInfo(state) {
         return state.cryptoData;
+    },
+    getCryptoSearchData(state) {
+        return state.cryptoSearchData;
     }
 };
 
@@ -49,6 +53,27 @@ export const actions = {
         ).catch(error => {
             alert('Error has happen!');
         });
+    },
+
+    //Fetch search data from API
+    async getSearchData({ commit }, name) {
+
+        if (name) {
+
+            let url =
+                import.meta.env.VITE_SEARCH + name;
+            await axios.get(url).then(
+                res => {
+                    commit('SetSearchData', res.data['coins'][0])
+                }
+            ).catch(error => {
+                alert('Error has happen!');
+            });
+
+        } else {
+            console.log('Error has happen in the getSearchData function!')
+        }
+
     }
 };
 
@@ -57,9 +82,13 @@ export const mutations = {
         state.crypto = payload;
     },
     SetCryptoID(state, payload) {
+        localStorage.item = payload;
         state.cryptoID = payload;
     },
     SetCryptoData(state, payload) {
         state.cryptoData = payload;
+    },
+    SetSearchData(state, payload) {
+        state.cryptoSearchData = payload
     }
 };
