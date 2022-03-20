@@ -83,7 +83,7 @@ export default {
          <div class="xl:py-8 xl:px-8 py-6">
 
            <a class="bg-gray-100 hover:bg-green-400 hover:text-white dark:bg-gray-700 dark:hover:bg-gray-900 transition-all dark:text-yellow text-gray-700 rounded px-32 py-4 uppercase font-semibold" :href="getCryptoChartInfo['links']['homepage'][0]" target="_blank" rel="noopener noreferrer"> 
-             Visit {{getCryptoChartInfo['name']}} Website
+             Visit Website
            </a>
 
          </div>
