@@ -19,7 +19,7 @@ export const getters = {
     },
     getCryptoSearchData(state) {
         return state.cryptoSearchData;
-    }
+    },
 };
 
 export const actions = {
@@ -74,7 +74,8 @@ export const actions = {
             console.log('Error has happen in the getSearchData function!')
         }
 
-    }
+    },
+
 };
 
 export const mutations = {
@@ -89,6 +90,6 @@ export const mutations = {
         state.cryptoData = payload;
     },
     SetSearchData(state, payload) {
-        state.cryptoSearchData = payload
-    }
+        state.cryptoSearchData = payload;
+    },
 };
